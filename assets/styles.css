@@ -410,6 +410,13 @@ section:last-of-type { border-bottom: 0; }
   font-size: 14px; color: var(--text-muted);
   line-height: 1.55;
 }
+ul.project-desc {
+  padding-left: 1.1rem;
+  list-style: disc;
+}
+ul.project-desc li {
+  margin-bottom: 4px;
+}
 .project-tools {
   display: flex; flex-wrap: wrap; gap: 6px;
   margin-top: auto; padding-top: 4px;
