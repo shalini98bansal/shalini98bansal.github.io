@@ -497,3 +497,52 @@ ul.project-desc li {
 .about-side dd > div + div {
   border-top: 1px dashed var(--border);
 }
+
+/* Link from a project card to its full detail page */
+.project-link {
+  font-family: var(--font-mono);
+  font-size: 12px; letter-spacing: 0.04em;
+  color: var(--accent);
+  margin-top: 4px;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: gap 0.15s ease;
+}
+.project-link:hover { gap: 10px; }
+
+/* Machined-part photo toggle inside the 3D viewer frame — supports multiple photos per card, cycled by the button */
+.viewer-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.viewer-photo.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.viewer-frame.show-photo canvas {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.viewer-photo-count {
+  position: absolute;
+  bottom: 10px; left: 12px;
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: 0.06em;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(4px);
+  padding: 3px 7px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.viewer-frame.show-photo .viewer-photo-count {
+  opacity: 1;
+}
