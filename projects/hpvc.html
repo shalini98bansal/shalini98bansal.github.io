@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VAJRA — Human Powered Vehicle | Shalini Bansal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../assets/hpvc.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html#top" class="nav-brand">SHALINI BANSAL</a>
+      <div class="nav-links">
+        <a href="../index.html#about" data-mobile-hide>About</a>
+        <a href="../index.html#experience" data-mobile-hide>Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#misc">Misc</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="detail-header">
+    <div class="container">
+      <a href="../index.html#projects" class="back-link">← Back to projects</a>
+
+      <div class="hero-meta">HPVC · RECUMBENT BICYCLE — P-05</div>
+      <h1 class="detail-title">Human Powered Vehicle — <span class="accent">VAJRA</span></h1>
+      <p class="detail-tagline">
+        A semi-recumbent human-powered vehicle built for ASME's Human Powered Vehicle Challenge, Rajkot 2020.
+        I owned the CAD, subsystem design, and prototyping — and rode Vajra myself in the race and endurance events.
+      </p>
+
+      <div class="spec-grid">
+        <div class="spec-item">
+          <div class="spec-label">Frame</div>
+          <div class="spec-value">Al 6063</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Wheelbase</div>
+          <div class="spec-value">1200 mm</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Drag coeff.</div>
+          <div class="spec-value">0.20</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Build cost</div>
+          <div class="spec-value">₹50,266</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="role">
+      <div class="container">
+        <div class="section-label">01 — My role</div>
+        <p style="max-width:620px; font-size:15px; color:var(--text-muted); margin-bottom:24px;">
+          I led the overall CAD modeling and subsystem design for Vajra, from concept sketches through to the
+          final assembly, and built and tested the physical prototypes — including a PVC mockup used to validate
+          roll-cage geometry and rider clearance before committing to the final frame dimensions. I also rode Vajra
+          in both the race and endurance events at competition, giving me first-hand feedback on the handling and
+          ergonomics decisions we'd made on paper.
+        </p>
+        <div class="analysis-frame" style="aspect-ratio:16/9;">
+          <!-- Replace with: <video controls poster="../images/ride-poster.jpg" style="width:100%;height:100%;object-fit:cover;"><source src="../videos/vajra-ride.mp4" type="video/mp4"></video> -->
+          <span class="placeholder-label">Competition ride video<br>(videos/vajra-ride.mp4)</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="design">
+      <div class="container">
+        <div class="section-label">02 — Design rationale</div>
+        <p style="max-width:620px; font-size:15px; color:var(--text-muted); margin-bottom:32px;">
+          Each major subsystem was chosen through a weighted decision matrix scoring the alternatives against
+          comfort, safety, efficiency, cost, and manufacturability.
+        </p>
+
+        <div class="decision-grid">
+          <div class="decision-card">
+            <h3>Vehicle configuration</h3>
+            <span class="decision-verdict">Semi-recumbent — scored 5.0 vs. −6.5 (recumbent), 1.5 (upright)</span>
+            <p>Semi-recumbent won on the strength of its safety and efficiency scores, without giving up as much stability as a fully recumbent layout.</p>
+          </div>
+          <div class="decision-card">
+            <h3>Frame material</h3>
+            <span class="decision-verdict">Al 6063 — scored 7.5 vs. 5.0 (AISI 1018), −7.5 (Al 6061)</span>
+            <p>Al 6063 machines easily, extrudes into complex shapes, and gave the strength-to-weight ratio needed for a single-mainframe design.</p>
+          </div>
+          <div class="decision-card">
+            <h3>Drivetrain</h3>
+            <span class="decision-verdict">Chain drive, rear-wheel powered</span>
+            <p>Chain drive offered lower transmission losses and easier repair than the alternatives; rear-wheel drive improved traction and weight distribution.</p>
+          </div>
+          <div class="decision-card">
+            <h3>Fairing</h3>
+            <span class="decision-verdict">Partial — scored 8.0 vs. −4.0 (full fairing)</span>
+            <p>Partial fairing gave up some drag reduction in exchange for lower manufacturing cost and a better field of view for the rider.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="analysis">
+      <div class="container">
+        <div class="section-label">03 — Analysis</div>
+        <p style="max-width:620px; font-size:15px; color:var(--text-muted); margin-bottom:8px;">
+          FEA and CFD validated the roll cage, frame, and fairing before any material was cut.
+        </p>
+
+        <div class="analysis-row">
+          <div class="analysis-frame">
+            <!-- Replace with: <img src="../images/fea-top-load.jpg" alt="Von Mises stress plot, RPS top load case" style="width:100%;height:100%;object-fit:cover;"> -->
+            <span class="placeholder-label">FEA — RPS top load</span>
+          </div>
+          <div class="analysis-body">
+            <h3>Roll cage — top load</h3>
+            <p>2670 N applied at 12° from vertical, per rider, simulating an inverted-vehicle accident.</p>
+            <div class="stat-line">
+              <div><div class="stat-value">0.038 cm</div><div class="stat-label">deformation (limit 5.1 cm)</div></div>
+              <div><div class="stat-value">3.11</div><div class="stat-label">factor of safety</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="analysis-row">
+          <div class="analysis-frame">
+            <!-- Replace with: <img src="../images/fea-side-load.jpg" alt="Von Mises stress plot, RPS side load case" style="width:100%;height:100%;object-fit:cover;"> -->
+            <span class="placeholder-label">FEA — RPS side load</span>
+          </div>
+          <div class="analysis-body">
+            <h3>Roll cage — side load</h3>
+            <p>1330 N applied horizontally at shoulder height, simulating the vehicle falling on its side.</p>
+            <div class="stat-line">
+              <div><div class="stat-value">0.269 cm</div><div class="stat-label">deformation (limit 3.8 cm)</div></div>
+              <div><div class="stat-value">1.68</div><div class="stat-label">factor of safety</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="analysis-row">
+          <div class="analysis-frame">
+            <!-- Replace with: <img src="../images/fea-frame.jpg" alt="Von Mises stress plot, main frame under rider load" style="width:100%;height:100%;object-fit:cover;"> -->
+            <span class="placeholder-label">FEA — main frame</span>
+          </div>
+          <div class="analysis-body">
+            <h3>Main frame</h3>
+            <p>800 N distributed load representing rider weight, applied along the mainframe rod.</p>
+            <div class="stat-line">
+              <div><div class="stat-value">0.044 mm</div><div class="stat-label">max deformation</div></div>
+              <div><div class="stat-value">6.20</div><div class="stat-label">factor of safety</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="analysis-row">
+          <div class="analysis-frame">
+            <!-- Replace with: <img src="../images/cfd-velocity.jpg" alt="CFD velocity contour around the fairing" style="width:100%;height:100%;object-fit:cover;"> -->
+            <span class="placeholder-label">CFD — velocity contour</span>
+          </div>
+          <div class="analysis-body">
+            <h3>Aerodynamics</h3>
+            <p>Computational flow simulation at a 20 m/s inlet velocity, comparing full and partial fairing options.</p>
+            <div class="stat-line">
+              <div><div class="stat-value">0.20</div><div class="stat-label">coefficient of drag</div></div>
+              <div><div class="stat-value">1.056 m²</div><div class="stat-label">frontal area</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prototyping">
+      <div class="container">
+        <div class="section-label">04 — Prototyping &amp; testing</div>
+        <p style="max-width:620px; font-size:15px; color:var(--text-muted); margin-bottom:32px;">
+          Before committing to final dimensions, key design decisions were validated with physical mockups rather
+          than simulation alone.
+        </p>
+
+        <div class="triptych">
+          <div>
+            <div class="analysis-frame">
+              <!-- Replace with: <img src="../images/test-rps-cardboard.jpg" alt="Cardboard RPS clearance test" style="width:100%;height:100%;object-fit:cover;"> -->
+              <span class="placeholder-label">Cardboard RPS mockup</span>
+            </div>
+            <h4>Roll-cage clearance</h4>
+            <p>A cardboard cut-out confirmed shoulder clearance and rollbar angle with the rider seated.</p>
+          </div>
+          <div>
+            <div class="analysis-frame">
+              <!-- Replace with: <img src="../images/test-pvc-model.jpg" alt="PVC pipe model of the vehicle frame" style="width:100%;height:100%;object-fit:cover;"> -->
+              <span class="placeholder-label">PVC frame model</span>
+            </div>
+            <h4>Frame geometry</h4>
+            <p>A heat-bent PVC pipe model set front fork positioning and overall frame geometry before fabrication.</p>
+          </div>
+          <div>
+            <div class="analysis-frame">
+              <!-- Replace with: <img src="../images/test-fairing-rig.jpg" alt="Wooden test frame with fairing material under pressure" style="width:100%;height:100%;object-fit:cover;"> -->
+              <span class="placeholder-label">Fairing pressure rig</span>
+            </div>
+            <h4>Fairing durability</h4>
+            <p>Fairing material was pressure-tested to 1037 N/m² — well above the 218.1 N/m predicted by CFD.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="results">
+      <div class="container">
+        <div class="section-label">05 — Results vs. targets</div>
+        <table class="results-table">
+          <thead>
+            <tr><th>Parameter</th><th>Target</th><th>Actual</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Cost</td><td>&lt; ₹70,000</td><td class="actual">₹50,266</td></tr>
+            <tr><td>Turning radius</td><td>&lt; 8 m</td><td class="actual">1.866 m</td></tr>
+            <tr><td>Riding position</td><td>Comfortable semi-recumbent</td><td class="actual">Achieved</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="cad">
+      <div class="container">
+        <div class="section-label">06 — CAD &amp; files</div>
+        <p style="max-width:620px; font-size:15px; color:var(--text-muted); margin-bottom:28px;">
+          Full assembly modeled from concept through final fabrication drawings. STEP file available for anyone
+          who wants to open it in their own CAD software.
+        </p>
+
+        <div class="cad-grid">
+          <div class="analysis-frame">
+            <!-- Replace with: <img src="../images/cad-isometric.jpg" alt="Isometric CAD render of Vajra" style="width:100%;height:100%;object-fit:cover;"> -->
+            <span class="placeholder-label">CAD render — isometric view</span>
+          </div>
+          <div class="analysis-frame">
+            <!-- Replace with: <img src="../images/cad-exploded.jpg" alt="Exploded view of Vajra subsystems" style="width:100%;height:100%;object-fit:cover;"> -->
+            <span class="placeholder-label">CAD render — exploded view</span>
+          </div>
+        </div>
+
+        <div class="download-row">
+          <a class="btn btn-primary" href="../files/vajra.step">Download CAD (.step)</a>
+          <span class="filesize">Compress images before uploading — see notes below.</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="footer">
+    VAJRA — DESIGNED AND BUILT BY TEAM CYCLE-OPS, SIR MVIT, FOR ASME HPVC 2020
+  </div>
+
+</body>
+</html>
