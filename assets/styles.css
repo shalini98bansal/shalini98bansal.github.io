@@ -208,7 +208,7 @@ section:last-of-type { border-bottom: 0; }
 .about-side dd { color: var(--text); }
 
 /* Experience timeline */
-.timeline { position: relative; padding-left: 28px; }
+.timeline { position: relative; padding-left: 28px; list-style: none; }
 .timeline::before {
   content: ""; position: absolute;
   left: 8px; top: 8px; bottom: 8px;
@@ -218,7 +218,7 @@ section:last-of-type { border-bottom: 0; }
 .timeline-item:last-child { padding-bottom: 0; }
 .timeline-item::before {
   content: ""; position: absolute;
-  left: -27px; top: 8px;
+  left: -24px; top: 8px;
   width: 9px; height: 9px;
   background: var(--bg);
   border: 1.5px solid var(--accent);
@@ -497,3 +497,14 @@ ul.project-desc li {
 .about-side dd > div + div {
   border-top: 1px dashed var(--border);
 }
+
+/* Link from a project card to its full detail page */
+.project-link {
+  font-family: var(--font-mono);
+  font-size: 12px; letter-spacing: 0.04em;
+  color: var(--accent);
+  margin-top: 4px;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: gap 0.15s ease;
+}
+.project-link:hover { gap: 10px; }
