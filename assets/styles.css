@@ -189,6 +189,9 @@ section:last-of-type { border-bottom: 0; }
 .about-body p {
   font-size: 17px; color: var(--text);
   margin-bottom: 16px; line-height: 1.65;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 .about-body p:last-child { margin-bottom: 0; }
 .about-body .muted { color: var(--text-muted); }
