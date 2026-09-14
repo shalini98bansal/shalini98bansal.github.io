@@ -508,3 +508,47 @@ ul.project-desc li {
   transition: gap 0.15s ease;
 }
 .project-link:hover { gap: 10px; }
+
+/* Machined-part photo toggle inside the 3D viewer frame — supports multiple photos per card, cycled by the button */
+.viewer-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.viewer-photo.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* Belt-and-suspenders: guarantee the photo stays hidden unless the frame is
+   explicitly in show-photo state, regardless of any stray .active class. */
+.viewer-frame:not(.show-photo) .viewer-photo {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+.viewer-frame.show-photo canvas {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.viewer-photo-count {
+  position: absolute;
+  bottom: 10px; left: 12px;
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: 0.06em;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(4px);
+  padding: 3px 7px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.viewer-frame.show-photo .viewer-photo-count {
+  opacity: 1;
+}
